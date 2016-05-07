@@ -1,1 +1,1 @@
-<h2>Chose morozov_n branch to see my work</h2>
+<h2>Choose morozov_n branch to see my work</h2>
