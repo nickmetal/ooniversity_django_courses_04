@@ -93,7 +93,7 @@ STATICFILES_DIRS = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'), )
 
-ADMINS = (('First','admin@yahoo.eu'),('Sec', 'best.admin13@mail.ru'))
+ADMINS = (('My','nickmetal@yandex.ua'),)#('Nickolai_Borovenskiy', 'nikolay.borovenskiy@gmail.com'))
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
