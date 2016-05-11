@@ -1,18 +1,10 @@
 # encoding: utf-8
-"""
-Django settings for pybursa project.
 
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
-"""
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+USE_DEFAULT_DB = 1 #MY settings item for local_settings
+                   #using sqlite3 or postgres
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -63,8 +55,6 @@ WSGI_APPLICATION = 'pybursa.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-USE_DEFAULT_DB = 1 #MY settings item for local_settings
-                   #using sqlite3 or postgres
 
 DATABASES = {
     'default': {

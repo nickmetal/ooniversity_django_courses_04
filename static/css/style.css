@@ -138,7 +138,9 @@ h3.well-sm, h2.Description_title, table.table-condensed{
   color: #FFF;
   text-align: center;
 }
-
+.orgs_and_founders{
+  margin-bottom: 20%;
+}
 /*-------------------------student_list--------------------------------*/
 .list_name_page {
   padding-top: 5px;
@@ -270,7 +272,7 @@ hr.my_hr{
   background-image:linear-gradient(to right,#2F5765, #2F5765, #282828);
   text-align:center;
   width: 28%;
-  margin-left: -5%;
+  margin-left: -2%;
   position: relative;
   margin-top: 6%;
   bottom: 5%;
@@ -382,10 +384,9 @@ hr.my_hr{
   width: 50%;
 }
 
-
 #add_student_form #id_courses{
   margin-left: 6.7%;
-  width: 25%;
+  width: 30%;
   margin-bottom: 10px;
 }
 
@@ -397,3 +398,41 @@ hr.my_hr{
 #add_student_form #btn_addstudent{
   margin-left: 70%;
 }
+
+/*-------------------------edit_student-form--------------------------------*/
+
+#edit_student #id_name{
+  margin-left: 4%;
+  width: 15%;
+}
+
+#edit_student #id_surname{
+  margin-left: 2.2%;
+}
+#edit_student #id_email{
+  margin-left: 3.73%;
+}
+#edit_student #id_phone{
+  margin-left: 3.3%;
+}
+
+#edit_student #id_address{
+  margin-left: 2.2%;
+}
+#edit_student #id_skype{
+  margin-left: 3.3%;
+}
+#edit_student #id_courses{
+  margin-left: 4.6%;
+  width: 30%;
+}
+
+#edit_student .helptext{
+  display: block;
+  margin-left: 2%;
+}
+
+#edit_student #btn_editstudent{
+  margin-left: 28%;
+}
+

@@ -66,6 +66,7 @@ class StudentUpdateView(UpdateView):
     model = Student
     template_name_suffix = '_update_form'
     success_url = reverse_lazy('students:edit')
+    form_class = StudentAddForm
 
     def get_context_data(self, **kwargs):
         context = super(StudentUpdateView, self).get_context_data(**kwargs)

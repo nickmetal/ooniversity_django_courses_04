@@ -19,7 +19,7 @@ class StudentAddForm(forms.ModelForm):
         model = Student
         fields = '__all__'
 
-        BIRTH_YEAR_CHOICES = tuple(range(1900,2001))
+        BIRTH_YEAR_CHOICES = tuple(range(1960,2001))
         widgets = {
             'date_of_birth': SelectDateWidget(years=BIRTH_YEAR_CHOICES)
         }
