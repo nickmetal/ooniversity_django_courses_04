@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'students',
     'coaches',
     'feedbacks',
-    #'debug_toolbar',
+    'sendgrid',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,6 +63,8 @@ WSGI_APPLICATION = 'pybursa.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+USE_DEFAULT_DB = 1 #MY settings item for local_settings
+                   #using sqlite3 or postgres
 
 DATABASES = {
     'default': {
@@ -93,11 +95,12 @@ STATICFILES_DIRS = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'), )
 
-ADMINS = (('My','nickmetal@yandex.ua'),)#('Nickolai_Borovenskiy', 'nikolay.borovenskiy@gmail.com'))
+ADMINS = (('My','nickmetal92@gmail.com'),)
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
 EMAIL_USE_TLS = False
+
 
 LOGGING = {
     'version': 1,

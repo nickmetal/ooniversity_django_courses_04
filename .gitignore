@@ -4,3 +4,4 @@
 *.log
 pybursa/local_settings.py
 static_files/
+logs/
