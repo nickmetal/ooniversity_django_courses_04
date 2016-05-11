@@ -53,29 +53,6 @@ h3.well-sm, h2.Description_title, table.table-condensed{
   position: fixed;
 }
 
-/*.index_footer{
-  width: 100%;
-  height: 14px;
-  color: #FFFFFF;
-  background-color: #1D4859;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-}
-
-.index_border_line{
-    width: 100%;
-    height: 5px;
-    background-color: #B2CFEE;
-    bottom: 11px;
-    position: fixed;
-}*/
-
-/*.index_footer_text{
-  color: #FFF;
-  text-align: center;
-}*/
-
 #panel_1{
   width: 10%;
   left: 70px;
@@ -192,7 +169,7 @@ h3.well-sm, h2.Description_title, table.table-condensed{
 }
 
 a:hover {
-    color: #58ABCE;
+    color: #AFC3E5;
 }
 
 a{
@@ -260,20 +237,17 @@ a{
 
 /*-------------------------student_detail--------------------------------*/
 
+tr:hover {background-color: #417D93}
 
 
-
-/*tr:hover {background-color: #417D93}*/
-
-
-/*th.marker::selection, td.marker::selection {
-  background: #00C0BA;
+th.marker::selection, td.marker::selection {
+  background: #12A39F;
 
 }
 th.marker::-moz-selection, td.marker::selection {
-  background: #00C0BA;
+  background: #12A39F;
 }
-*/
+
 /*---------------course detail---------------------------*/
 
 .my_labels{
@@ -295,46 +269,21 @@ hr.my_hr{
 .contact_me{
   background-image:linear-gradient(to right,#2F5765, #2F5765, #282828);
   text-align:center;
-  /*margin-left: 20%;*/
   width: 28%;
-  /*padding:3px;*/
-  /*margin-top: 14%;*/
-  margin-left: -3%;
-  position: fixed;
+  margin-left: -5%;
+  position: relative;
+  margin-top: 6%;
   bottom: 5%;
 }
-
 
 
 .contact_me > h4 >a:hover{
   color: #93D5FE;
 }
-/*.contact_me > h4 >a:visited{
-  color: #6CA3D3;
-}*/
 
 .contact_me > h4 >a{
   color: #FFFFFF;
 }
-
-/*a.contact_me{
-  color: #FFFFFF;
-  text-decoration: underline;
-}
-*/
-/*-----------feedback-------------*/
-/*#id_name,
-#id_from_email,
-#id_subject,
-#id_message {
-  margin-top: -5%;
-  display: table;
-  margin-left: 130px;
-}
-
-#btn_feedback_send{
-  margin-left: 73%;
-}*/
 
 /*-------------------------feadback-form--------------------------------*/
 #feadback_message {
@@ -353,5 +302,98 @@ hr.my_hr{
 #feadback-form #id_from_email{
   margin-left: 1.7%;
 }#feadback-form #btn_feedback_send{
+  margin-left: 70%;
+}
+
+/*-------------------------addcourse-form--------------------------------*/
+#add_course_form #id_name{
+  margin-left: 18%;
+  width: 50%;
+}
+#add_course_form #id_short_description{
+  margin-left: 2.4%;
+  width: 50%;
+}
+#add_course_form #id_description{
+  width: 100%;
+}
+#add_course_form #id_coach{
+  margin-left: 4%;
+}
+#add_course_form #btn_crtform{
+  margin-left: 70%;
+}
+
+/*-------------------------addlesson-form--------------------------------*/
+#add_lesson_form #id_subject{
+  margin-left: 8%;
+  width: 50%;
+}
+
+#add_lesson_form #id_description{
+  width: 100%;
+}
+
+#add_lesson_form #id_course{
+  margin-left: 4%;
+}
+#add_lesson_form #id_order{
+  margin-left: 6.4%;
+  width: 15%;
+}
+
+#add_lesson_form #btn_crtlesson{
+  margin-left: 70%;
+}
+
+/*-------------------------addstudent-form--------------------------------*/
+
+#add_student_form #id_name{
+  margin-left: 10.4%;
+  width: 50%;
+}
+
+#add_student_form #id_surname{
+  margin-left: 6%;
+  width: 50%;
+}
+
+#add_student_form #id_date_of_birth_month{
+  margin-left: 1%;
+}
+
+#add_student_form #id_email{
+  margin-left: 10.6%;
+  width: 50%;
+}
+
+#add_student_form #id_phone{
+  margin-left: 9.5%;
+  width: 50%;
+}
+
+#add_student_form #id_address{
+  margin-left: 7%;
+  width: 50%;
+}
+
+#add_student_form #id_skype{
+  margin-left: 10%;
+  width: 50%;
+}
+
+
+#add_student_form #id_courses{
+  margin-left: 6.7%;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+#add_student_form .helptext{
+  display: block;
+  margin-left: 2%;
+}
+
+#add_student_form #btn_addstudent{
   margin-left: 70%;
 }

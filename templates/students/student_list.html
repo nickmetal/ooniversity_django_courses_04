@@ -9,14 +9,8 @@
 
 {% block content %}
 
-    <button class="btn btn-primary add_student"
-            type="button">
-            <a href="{% url 'students:add' %}">
-            <span class="glyphicon glyphicon-plus">Добавить нового студента</span>
-            </a>
-    </button>
-
-
+  <a href="{% url 'students:add' %}" class="btn btn-primary add_student" role="button">
+  <span class="glyphicon glyphicon-plus"></span>Добавить нового студента</a>
 
     <h1 class="list_name_page">Список студентов</h1>
     {% if object_list %}

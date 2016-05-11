@@ -14,11 +14,11 @@
 
 
 {% block content %}
-<div class="col-lg-10 create_form">
+<div class="col-lg-10 create_form" id="add_student_form">
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" class="btn btn-success" value="Создать" />
+    <input type="submit" id="btn_addstudent" class="btn btn-success" value="Создать" />
   </form>
 </div>
 {% endblock %}

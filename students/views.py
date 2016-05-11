@@ -7,9 +7,11 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django import forms
+from django.forms.extras.widgets import SelectDateWidget
 
 from students.models import Student
-from students.forms import StudentModelForm
+from students.forms import StudentModelForm, StudentAddForm
 
 import logging
 logger = logging.getLogger(__name__)
@@ -31,7 +33,7 @@ class StudentDetailView(DetailView):
 
 class StudentListView(ListView):
     model = Student
-    paginate_by = 2
+    paginate_by = 3
 
     def get_queryset(self):
         course_id = self.request.GET.get('course_id', None)
@@ -45,6 +47,7 @@ class StudentListView(ListView):
 class StudentCreateView(CreateView):
     model = Student
     success_url = reverse_lazy('students:list_view')
+    form_class = StudentAddForm
 
     def get_context_data(self, **kwargs):
         context = super(StudentCreateView,self).get_context_data(**kwargs)
@@ -57,6 +60,7 @@ class StudentCreateView(CreateView):
             application.name, application.surname)
         messages.success(self.request, msg)
         return super(StudentCreateView, self).form_valid(form)
+
 
 class StudentUpdateView(UpdateView):
     model = Student
