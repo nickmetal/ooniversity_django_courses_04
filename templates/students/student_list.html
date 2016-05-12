@@ -7,12 +7,13 @@
 
 {% block nav_class_studs %}active{% endblock %}
 
+{% block page_main_header %}Список студентов{% endblock %}
+
 {% block content %}
 
-  <a href="{% url 'students:add' %}" class="btn btn-primary add_student" role="button">
-  <span class="glyphicon glyphicon-plus"></span>Добавить нового студента</a>
+  <p><a href="{% url 'students:add' %}" class="btn btn-primary add_student" role="button">
+  <span class="glyphicon glyphicon-plus"></span>Добавить нового студента</a></p>
 
-    <h1 class="list_name_page">Список студентов</h1>
     {% if object_list %}
     <div class="container">
       <table class="table table-condensed">

@@ -7,19 +7,19 @@
 
 {% block nav_class_ind %}active{% endblock %}
 
+{% block page_main_header %}University{% endblock %}
+
 {% block content %}
 
-
-{% if messages %}
-<div class="alert alert-success my_messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</div>
-{% endif %}
-
     <div class="container">
-      <h1 class="course_name">University</h1>
+    {% if messages %}
+      <div class="alert alert-success my_messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+    </div>
+
+{% endif %}
       <h3 class="well well-sm"><em>Курс подразумевает, что студенты уже освоили базовый python.
 В рамках курса даются азы html/css, достаточные для формирования html страниц браузеру, но не достаточные для профессиональной верстки.
 Глубина освоения django будет достаточной для самостоятельного написания web-проектов, которые содержат редактируемые страницы, структуру специфических данных, отображение их на фронтенде и создание-редактирование этих данных.</em></h3>

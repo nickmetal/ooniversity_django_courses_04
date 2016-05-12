@@ -20,7 +20,7 @@ h3.well-sm, h2.Description_title, table.table-condensed{
 }
 
 .course_name {
-  padding: 20px 15px;
+  padding-top: 40px;
   text-align: center;
   color:#FFFFFF;
 }
@@ -79,8 +79,8 @@ h3.well-sm, h2.Description_title, table.table-condensed{
 
 
 .my_messages{
-  margin-left: 10%;
-  width: 74%;
+  margin-left: 30%;
+  width: 40%;
 }
 
 /*-------------------------Contacts--------------------------------*/
@@ -177,6 +177,37 @@ a:hover {
 a{
   color: #FFFFFF;
   text-decoration: underline;
+}
+
+.white_links:hover{
+  color: #71CAC5;
+  text-decoration: none;
+}
+.white_links {
+  color: #0D978F;
+  text-decoration: none;
+}
+
+.red_links:hover{
+  color: #FFBBAF;
+  text-decoration: none;
+}
+.red_links:active{
+  color: #FCD5CE;
+  text-decoration: none;
+}
+.red_links:visited{
+  color: #F98E7A;
+  text-decoration: none;
+}
+
+
+.red_links {
+  color: #F98E7A;
+  text-decoration: none;
+}
+.normal_text{
+  color: #292929;
 }
 
 .add_student{
@@ -288,10 +319,7 @@ hr.my_hr{
 }
 
 /*-------------------------feadback-form--------------------------------*/
-#feadback_message {
-  margin-left: 30%;
-  width: 40%;
-}
+
 #feadback-form #id_name{
   margin-left: 10%;
 }
@@ -307,7 +335,7 @@ hr.my_hr{
   margin-left: 70%;
 }
 
-/*-------------------------addcourse-form--------------------------------*/
+/*-------------------------add_course_form--------------------------------*/
 #add_course_form #id_name{
   margin-left: 18%;
   width: 50%;
@@ -325,6 +353,27 @@ hr.my_hr{
 #add_course_form #btn_crtform{
   margin-left: 70%;
 }
+
+/*-------------------------edit_course_form--------------------------------*/
+#edit_course_form #id_name{
+  margin-left: 18%;
+  width: 50%;
+}
+#edit_course_form #id_short_description{
+  margin-left: 2.4%;
+  width: 50%;
+}
+#edit_course_form #id_description{
+  width: 100%;
+}
+#edit_course_form #id_coach{
+  margin-left: 4%;
+}
+#edit_course_form #btn_editcourse_form{
+  margin-left: 70%;
+}
+
+
 
 /*-------------------------addlesson-form--------------------------------*/
 #add_lesson_form #id_subject{
@@ -435,4 +484,5 @@ hr.my_hr{
 #edit_student #btn_editstudent{
   margin-left: 28%;
 }
+
 
