@@ -3,8 +3,8 @@
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-USE_DEFAULT_DB = 1 #MY settings item for local_settings
-                   #using sqlite3 or postgres
+USE_DEFAULT_DB = 0 #MY settings item for local_settings
+                   #using sqlite3(1) or postgres (0)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
