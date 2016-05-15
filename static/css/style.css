@@ -77,12 +77,6 @@ h3.well-sm, h2.Description_title, table.table-condensed{
   margin-bottom: 2%;
 }
 
-
-/*.my_messages{
-  margin-left: 30%;
-  width: 40%;
-}*/
-
 .my_messages{
     width: 50%;
     margin: 0 auto;
@@ -182,12 +176,25 @@ h3.well-sm, h2.Description_title, table.table-condensed{
 }
 /*-------------------------student_list--------------------------------*/
 .list_name_page {
-  padding-top: 5px;
+  padding-top: 15px;
   padding-left: 9%;
   padding-bottom: 1%;
   text-align: left;
 }
 
+.my_breadcrumb{
+  position: relative;
+  /*margin-top: 18%;*/
+  background-image:linear-gradient(to right,#754040, #754040, #282828);
+  min-width: 28%;
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+.my_breadcrumb li, .my_breadcrumb a {
+  font-style:italic;
+  text-decoration: none;
+}
 .list_info{
   padding-left: 6%;
 }
@@ -250,7 +257,7 @@ a{
 }
 
 .add_student{
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 10%;
 }
 

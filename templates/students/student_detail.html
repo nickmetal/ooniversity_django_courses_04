@@ -4,10 +4,18 @@
 
 {% block title %}Student Detail{% endblock %}
 
+{% block page_main_header %}Информация о студенте{% endblock %}
 
 {% block nav_class_studs %}active{% endblock %}
 
 {% block content %}
+
+<ol class="breadcrumb my_breadcrumb">
+  <li><a href="{% url 'index' %}">главная</a></li>
+  <li><a href="{% url 'students:list_view' %}">список_студентов</a></li>
+  <li class="active">{{ student.name|lower }}_{{ student.surname|lower }}</li>
+</ol>
+
     <h1 class="list_name_page">{{ student.name }} {{ student.surname }}</h1>
     <div class="container">
       <div class="row">

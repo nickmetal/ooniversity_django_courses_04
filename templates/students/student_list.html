@@ -4,12 +4,17 @@
 
 {% block title %}Students List{% endblock %}
 
+{% block page_main_header %}Список студентов{% endblock %}
 
 {% block nav_class_studs %}active{% endblock %}
 
-{% block page_main_header %}Список студентов{% endblock %}
 
 {% block content %}
+
+<ol class="breadcrumb my_breadcrumb">
+  <li><a href="{% url 'index' %}">главная</a></li>
+  <li class="active">список_студентов</li>
+</ol>
 
 {% if messages %}
   <div class="alert alert-success my_messages">
