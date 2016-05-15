@@ -321,6 +321,9 @@ th.marker::-moz-selection, td.marker::selection {
 }
 
 /*---------------course detail---------------------------*/
+#btn_edt_course{
+
+}
 
 .my_labels{
   margin-left: 7%;
@@ -395,8 +398,15 @@ hr.my_hr{
 #add_course_form #id_coach{
   margin-left: 4%;
 }
+
+#add_course_form #btn_crtform_cancel{
+  margin-left: 58%;
+  margin-right: 5px;
+}
+
 #add_course_form #btn_crtform{
-  margin-left: 70%;
+  margin-left: 74%;
+  width: 15%;
 }
 
 /*-------------------------edit_course_form--------------------------------*/
@@ -414,8 +424,13 @@ hr.my_hr{
 #edit_course_form #id_coach{
   margin-left: 4%;
 }
+#edit_course_form #btn_editcourse_form_cancel{
+  margin-left: 60%;
+  margin-right: 5px;
+}
 #edit_course_form #btn_editcourse_form{
-  margin-left: 70%;
+  margin-left: 75%;
+  width: 14%;
 }
 
 
@@ -438,8 +453,14 @@ hr.my_hr{
   width: 15%;
 }
 
+#add_lesson_form #btn_crtlesson_cancel{
+  margin-left: 55%;
+  margin-right: 5px;
+}
+
 #add_lesson_form #btn_crtlesson{
   margin-left: 70%;
+  width: 15%;
 }
 
 /*-------------------------addstudent-form--------------------------------*/
@@ -489,8 +510,14 @@ hr.my_hr{
   margin-left: 2%;
 }
 
+#add_student_form #btn_addstudent_cancel{
+  margin-left: 57%;
+  margin-right: 5px;
+}
+
 #add_student_form #btn_addstudent{
-  margin-left: 70%;
+  margin-left: 73%;
+  width: 15%;
 }
 
 /*-------------------------edit_student-form--------------------------------*/
@@ -526,8 +553,12 @@ hr.my_hr{
   margin-left: 2%;
 }
 
-#edit_student #btn_editstudent{
-  margin-left: 28%;
+#edit_student #btn_editstudent_form_cancel{
+  margin-left: 26%;
+  margin-right: 5px;
 }
-
+#edit_student #btn_editstudent{
+  margin-left: 32%;
+  width: 5%;
+}
 

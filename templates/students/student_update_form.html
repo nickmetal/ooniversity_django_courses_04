@@ -25,7 +25,17 @@
   <form method="post" id="edit_student" class="create_form">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" id="btn_editstudent" class="btn btn-warning" value="Изменить" />
+
+    <p><input type="submit"
+              id="btn_editstudent_form_cancel"
+              class="btn btn-default"
+              value="cancel"
+              onClick="history.go(-1);return true;">
+    </p>
+
+    <p>
+      <input type="submit" id="btn_editstudent" class="btn btn-warning" value="edit" />
+    </p>
   </form>
 </div>
 {% endblock content %}

@@ -25,7 +25,13 @@
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <p><input type="submit" id="btn_editcourse_form" class="btn btn-warning" value="Изменить"></p>
+    <p><input type="submit"
+              id="btn_editcourse_form_cancel"
+              class="btn btn-default"
+              value="cancel"
+              onClick="history.go(-1);return true;">
+    </p>
+    <p><input type="submit" id="btn_editcourse_form" class="btn btn-warning" value="edit"></p>
   </form>
 </div>
 {% endblock content %}
