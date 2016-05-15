@@ -78,9 +78,48 @@ h3.well-sm, h2.Description_title, table.table-condensed{
 }
 
 
-.my_messages{
+/*.my_messages{
   margin-left: 30%;
   width: 40%;
+}*/
+
+.my_messages{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.delete_window{
+  min-width:40%;
+  max-width:50%;
+  /*width:*/
+  /*height: 30%;*/
+  margin: 0 auto;
+}
+#jumbtr{
+  color: #EEEEEE;
+  text-shadow: 0 1px 0 #686868;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  border-radius: 5px 25px 5px;
+  background: #2DABB2;
+}
+.j_text{
+  margin-top: -7px;
+}
+
+.foot_btns{
+  display: inline-block;
+}
+
+.right_brns{
+  top: -10px;
+  height: 1px;
+  position: relative;
+  right: 15px;
+}
+.foot_btns{
+  position: relative;
+  top: 6px;
 }
 
 /*-------------------------Contacts--------------------------------*/
@@ -290,6 +329,12 @@ hr.my_hr{
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, #2F5765, #FFFFFF, #2F5765);
+}
+
+.my_hr2{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #5DADB2, #FFFFFF, #5DADB2);
 }
 
 .index_panel{
