@@ -1,5 +1,5 @@
 import os, sys
-path = '/opt/myenv/ooniversity_django_courses_04'
+path = '/home/norroen/ooniversity_django_courses_04/'
 #if path not in sys.path:
 sys.path.append(path)
 

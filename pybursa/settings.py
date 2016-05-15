@@ -18,7 +18,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+USE_DEFAULT_DB = 1
 
 # Application definition
 
@@ -131,6 +131,6 @@ LOGGING = {
 
 try:
     from local_settings import *
-    print "local_set-s(for DEPLOYED serv) is used now!"
+    print "----> local_set-s(for DEPLOYED serv) is used now!"
 except ImportError:
-    print "local_settings not found! Localhost is used now"
+    print "----> local_settings not found! Localhost is used now"

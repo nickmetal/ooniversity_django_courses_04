@@ -3,5 +3,7 @@
 *.pyo
 *.log
 pybursa/local_settings.py
-static_files/
+static_files/*
+media/*
+myenv/
 logs/
