@@ -28,7 +28,7 @@ def quadratic_results(request):
             else:
                 x1 = (-b + d**(1/2.0)) / 2*a
                 x2 = (-b - d**(1/2.0)) / 2*a
-                res_message = "Дискриминант равен нулю, квадратное уравнение имеет два действительных корня: x1 = {0}, x2 = {1}".format(x1, x2)
+                res_message = "Дискриминант не равен нулю, квадратное уравнение имеет два действительных корня: x1 = {0}, x2 = {1}".format(x1, x2)
             context.update({'d':d, 'res_message': res_message})
         else:
             context['error'] = True

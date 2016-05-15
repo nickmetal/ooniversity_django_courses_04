@@ -16,6 +16,7 @@ class FeedbackView(CreateView):
     model = Feedback
     template_name = 'feedback.html'
     success_url = reverse_lazy('feedback')
+    fields = '__all__'
 
     def form_valid(self, form):
         mail_form = form.save()
