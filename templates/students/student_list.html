@@ -8,13 +8,7 @@
 
 {% block nav_class_studs %}active{% endblock %}
 
-
 {% block content %}
-
-<ol class="breadcrumb my_breadcrumb">
-  <li><a href="{% url 'index' %}">главная</a></li>
-  <li class="active">список_студентов</li>
-</ol>
 
 {% if messages %}
   <div class="alert alert-success my_messages">
@@ -24,8 +18,15 @@
   </div>
 {% endif %}
 
+  <form method="GET" action="" class="search_form search_btns">
+    <input type="text" name="q" placeholder="Search students" value="{{ request.GET.q }}" />
+    <input type="submit" value="Search" class="btn btn-primary"/>
+  </form>
+
+  <div class="search_btns">
   <p><a href="{% url 'students:add' %}" class="btn btn-primary add_student" role="button">
   <span class="glyphicon glyphicon-plus"></span>Добавить нового студента</a></p>
+  </div>
 
     {% if object_list %}
     <div class="container">
@@ -58,7 +59,7 @@
                 <span class="glyphicon glyphicon-pencil"></span>Изменить</a><br>
             </td>
             <td><a href="{% url 'students:remove' student.id %}">
-          <span class="glyphicon glyphicon-remove"></span>Удалить</a><br>
+            <span class="glyphicon glyphicon-remove"></span>Удалить</a><br>
             </td>
 
           </tr>
@@ -70,26 +71,27 @@
   {% if is_paginated %}
         <div class="pagination my_pag">
             <span class="page-links">
-                {% if page_obj.has_previous %}
-                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+              {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+              {% endif %}
+              <span class="page-current ">
+                {% for i in paginator.page_range %}
+                  {% if i == page_obj.number %}
+                    <a class="pag_current_num" href="?page={{ i }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ i }}</a>
+                {% else %}
+                  <a href="?page={{ i }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ i }}</a>
                 {% endif %}
-                <span class="page-current ">
-                  {% for i in paginator.page_range %}
-                    {% if i == page_obj.number %}
-                      <a class="pag_current_num" href="?page={{ i }}">{{ i }}</a>
-                  {% else %}
-                    <a href="?page={{ i }}">{{ i }}</a>
-                  {% endif %}
-                  {% endfor %}
-                </span>
+                {% endfor %}
+              </span>
 
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}">next</a>
-                {% endif %}
+              {% if page_obj.has_next %}
+                  <a href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+              {% endif %}
 
             </span>
         </div>
     {% endif %}
+
 {% endif %}
 
 

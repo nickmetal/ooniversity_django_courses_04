@@ -1,17 +1,21 @@
 # encoding: utf-8
 from django.shortcuts import render, redirect
-from django.contrib import messages
 from django.shortcuts import get_object_or_404
-from django.views.generic.detail import DetailView
-from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib import messages
+
 from django.core.urlresolvers import reverse_lazy
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django import forms
 from django.forms.extras.widgets import SelectDateWidget
 
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.db.models import Q
+
 from students.models import Student
 from students.forms import StudentModelForm, StudentAddForm
+
 
 import logging
 logger = logging.getLogger(__name__)
@@ -41,7 +45,25 @@ class StudentListView(ListView):
             students = Student.objects.filter(courses__id=course_id).order_by('id')
         else:
             students = Student.objects.all()
+
+        q = self.request.GET.get("q")
+        if q:
+            students = students.filter(
+                Q(name__icontains=q) |
+                Q(surname__icontains=q)
+                )
+
         return students
+
+    def get_context_data(self, **kwargs):
+        context = super(StudentListView, self).get_context_data(**kwargs)
+
+        if not self.object_list:
+            context['messages'] = [u"Не найдено студентов по запросу '{}'.".format(self.request.GET.get("q"))]
+            # for i in context:
+            #     print '--->', i
+        return context
+
 
 
 class StudentCreateView(CreateView):

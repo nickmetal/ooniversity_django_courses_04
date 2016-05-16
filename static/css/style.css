@@ -78,8 +78,14 @@ h3.well-sm, h2.Description_title, table.table-condensed{
 }
 
 .my_messages{
-    width: 50%;
-    margin: 0 auto;
+  width: 50%;
+  margin: 0 auto;
+  border:50px;
+}
+
+.search_btns{
+  margin-top: 2%;
+  display: inline-block;
 }
 
 .delete_window{
@@ -188,6 +194,7 @@ h3.well-sm, h2.Description_title, table.table-condensed{
   background-image:linear-gradient(to right,#754040, #754040, #282828);
   min-width: 28%;
   max-width: 40%;
+  border: 5%;
   margin: 0 auto;
 }
 
@@ -257,8 +264,8 @@ a{
 }
 
 .add_student{
-  margin-top: 2%;
-  margin-left: 10%;
+  /*margin-top: 2%;*/
+  margin-left: 7%;
 }
 
 .create_form{
@@ -279,7 +286,15 @@ a{
 .create_form input {
   position:absolute;
   /*width: 10%;*/
+  /*color: #FFF;*/
   margin-right: 15%;
+}
+
+.search_form  {
+  /*position:absolute;*/
+  /*width: 10%;*/
+  /*color: #FFF;*/
+  margin-left: 10%;
 }
 
 .my_pag{
