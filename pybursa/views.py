@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-
+from django.http import JsonResponse
 from courses.models import Course
 
 
@@ -31,7 +31,9 @@ def contact(request):
             'lvl':'Founder'
             }]
 
-    return render(request, 'contact.html', {"contacts":context})
+    data = "Text Some 123123"
+
+    return render(request, 'contact.html', {"contacts":context, "data":data})
 
 def student_detail(request):
     return render(request, 'student_detail.html')
@@ -52,3 +54,10 @@ def handler500(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def getTimer(request):
+    # print request.is_ajax()
+    return JsonResponse({'time': '22:33'})
+
+def test(request):
+    return render(request, 'test.html')

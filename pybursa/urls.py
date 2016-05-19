@@ -6,8 +6,10 @@ from feedbacks.views import FeedbackView
 
 urlpatterns = patterns('',
     url(r'^$',views.index,name='index'),
+    url(r'^get_time/$',views.getTimer,name='get_time'),
     url(r'^feedback/', FeedbackView.as_view(),name='feedback'),
     url(r'^contact/$',views.contact,name='contact'),
+    url(r'^test/$',views.test,name='test'),
     url(r'^login/$',views.login,name='login'),
     url(r'^student_detail/$',views.student_detail,name='student_detail'),
     url(r'^polls/', include('polls.urls', namespace="polls")),
