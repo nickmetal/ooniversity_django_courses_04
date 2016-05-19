@@ -6,7 +6,7 @@ from feedbacks.views import FeedbackView
 
 urlpatterns = patterns('',
     url(r'^$',views.index,name='index'),
-    url(r'^get_time/$',views.getTimer,name='get_time'),
+    url(r'^getdata/$',views.getJSNdata,name='getJSNdata'),
     url(r'^feedback/', FeedbackView.as_view(),name='feedback'),
     url(r'^contact/$',views.contact,name='contact'),
     url(r'^test/$',views.test,name='test'),

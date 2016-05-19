@@ -5,6 +5,8 @@ from django.template import RequestContext
 from django.http import JsonResponse
 from courses.models import Course
 
+from django.utils import timezone
+import settings
 
 def index(request):
     course_qs = Course.objects.all()
@@ -55,9 +57,21 @@ def handler500(request):
 def login(request):
     return render(request, 'login.html')
 
-def getTimer(request):
-    # print request.is_ajax()
-    return JsonResponse({'time': '22:33'})
+def getJSNdata(request):
+    now=timezone.localtime(timezone.now()).strftime('%H:%M:%S')
+    print request.method
+
+    out_data = {"time":now}
+    print "request.GET", request.GET
+    print "request.POST", request.POST
+
+    if 'getStudent' in request.GET:
+        stud_link = request.GET.get('getStudent')
+        stud_id = stud_link.split('/')[-2]#[u'#', u'students', u'2', u'']
+        #print stud_id
+        out_data.update({"studentID": stud_id})
+
+    return JsonResponse(out_data)
 
 def test(request):
     return render(request, 'test.html')

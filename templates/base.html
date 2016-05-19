@@ -30,7 +30,7 @@
             <li class="{% block nav_class_ind %}{% endblock %}"><a href="{% url 'index' %}">Главная</a></li>
             <li class="{% block nav_class_studs %}{% endblock %}"><a href="{% url 'students:list_view' %}">Студенты</a></li>
             <li class="{% block nav_feedback %}{% endblock %}"><a href="{% url 'feedback' %}">Обратная связь</a></li>
-             <li class="dropdown">
+             <li class="dropdown {% block nav_class_utils %}{% endblock %}">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Utils <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="{% block nav_class_contact %}{% endblock %}"><a href="{% url 'contact' %}">Контакты</a></li>
