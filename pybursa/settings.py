@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'coaches',
     'feedbacks',
     'sendgrid',
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = (

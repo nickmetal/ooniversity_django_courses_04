@@ -41,18 +41,18 @@ def student_detail(request):
     return render(request, 'student_detail.html')
 
 
-def handler404(request):
-    response = render_to_response('404.html', {},
-                                  context_instance=RequestContext(request))
-    response.status_code = 404
-    return response
+# def handler404(request):
+#     response = render_to_response('404.html', {},
+#                                   context_instance=RequestContext(request))
+#     response.status_code = 404
+#     return response
 
 
-def handler500(request):
-    response = render_to_response('500.html', {},
-                                  context_instance=RequestContext(request))
-    response.status_code = 500
-    return response
+# def handler500(request):
+#     response = render_to_response('500.html', {},
+#                                   context_instance=RequestContext(request))
+#     response.status_code = 500
+#     return response
 
 def login(request):
     return render(request, 'login.html')
@@ -62,8 +62,9 @@ def getJSNdata(request):
     print request.method
 
     out_data = {"time":now}
-    print "request.GET", request.GET
-    print "request.POST", request.POST
+    #print "request.GET", request.GET
+    #print "request.POST", request.POST
+    print "request.user", request.user
 
     if 'getStudent' in request.GET:
         stud_link = request.GET.get('getStudent')
