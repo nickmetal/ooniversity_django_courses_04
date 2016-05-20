@@ -48,7 +48,12 @@
           </ul>
 
          <ul class="nav navbar-nav navbar-right">
-            <li class="{% block nav_login %}{% endblock %}"><a href="{% url 'login' %}">Войти</a></li>
+            <li class="{% block nav_login %}{% endblock %}">
+              <a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in">Войти</span></a>
+            </li>
+            <li class="{% block nav_logout %}{% endblock %}">
+              <a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out">Выйти</span></a>
+            </li>
           </ul>
 
         </div><!--/.nav-collapse -->
