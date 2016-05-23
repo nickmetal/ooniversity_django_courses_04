@@ -85,7 +85,7 @@ h3.well-sm, h2.Description_title, table.table-condensed{
 
 .search_btns{
   margin-top: 2%;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 .delete_window{
@@ -282,6 +282,14 @@ a{
 .btn_create{
   width: 20%;
 }
+#btn_seartch{
+  /*margin-left: -65%;*/
+  /*padding-left: 20px;*/
+}
+#gl_search{
+  color: #FFF;
+  /*margin-right: 13px;*/
+}
 
 .create_form input {
   position:absolute;
@@ -294,7 +302,7 @@ a{
   /*position:absolute;*/
   /*width: 10%;*/
   /*color: #FFF;*/
-  margin-left: 10%;
+  /*margin-left: 10%;*/
 }
 
 .my_pag{

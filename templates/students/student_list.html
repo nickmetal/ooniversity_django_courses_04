@@ -18,18 +18,29 @@
   </div>
 {% endif %}
 
-  <form method="GET" action="" class="search_form search_btns">
-    <input type="text" name="q" placeholder="Search students" value="{{ request.GET.q }}" />
-    <input type="submit" value="Search" class="btn btn-primary"/>
-  </form>
+<div class="row">
+  <div class="col-md-2 col-lg-offset-1">
+    <form method="GET" action=""
+      class="search_btns">
+      <input type="text" name="q" placeholder="Search students" value="{{ request.GET.q }}" />
+  </div>
+  <div class="col-sm-1">
+    <!-- <i class="glyphicon glyphicon-search" id="gl_search"></i> -->
+      <input type="submit"
+        value="Search"
+        class="btn btn-primary"
+        id="btn_seartch" />
+    </form>
+  </div>
 
-  <div class="search_btns">
+
+  <div class="col-md-3 col-lg-2 col-md-offset-5 "><!-- col-sm-offset-1 -->
   <p><a href="{% url 'students:add' %}" class="btn btn-primary add_student" role="button">
   <span class="glyphicon glyphicon-plus"></span>Добавить нового студента</a></p>
   </div>
-
+</div>
     {% if object_list %}
-    <div class="container">
+    <div class="container-fluid">
       <table class="table table-condensed">
         <thead>
           <tr>

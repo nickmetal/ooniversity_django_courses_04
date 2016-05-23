@@ -1,5 +1,5 @@
 import os, sys
-path = '/home/norroen/ooniversity_django_courses_04/'
+path = os.path.abspath(os.path.curdir)
 #if path not in sys.path:
 sys.path.append(path)
 
