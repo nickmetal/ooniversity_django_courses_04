@@ -301,6 +301,12 @@ a{
   margin-left: 10%;
 }
 
+.my_pag2{
+  margin-left: 50%;
+  position: absolute;
+  color: #9B0000;
+}
+
 .my_pag{
 
     font-size: 136%;

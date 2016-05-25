@@ -6,5 +6,6 @@ from . import views
 
 urlpatterns = patterns('',
     url(r'^$', views.PostListView.as_view(), name='index'),
+    # url(r'^(?P<pk>\d+)/$', views.PostDetailView.as_view(), name='detail'),
     url(r'^(?P<pk>\d+)/$', views.PostDetailView.as_view(), name='detail'),
 )

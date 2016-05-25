@@ -118,4 +118,4 @@ def getJSNdata(request):
     return JsonResponse(out_data)
 
 def test(request):
-    return render(request, 'test.html')
+    return render(request, 'index.html')

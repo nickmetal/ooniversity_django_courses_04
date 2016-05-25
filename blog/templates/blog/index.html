@@ -2,7 +2,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-
 {% block title %}Blog Home{% endblock %}
 
 
@@ -16,18 +15,14 @@
 
 
     <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Blog Entries Column -->
-            <div class="col-md-8">
-
-                <h1 class="page-header">
+  <div class="container">
+      <div class="row">
+        <!-- Blog Entries Column -->
+          <div class="col-md-8">
+              <h1 class="page-header">
                     Page Heading
                     <!-- <small>maybe tags</small> -->
                 </h1>
-
 
                 {% for post in object_list %}
                 <!-- First Blog Post -->
@@ -39,26 +34,40 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Опубликовано {{ post.create_date }}</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <img class="img-responsive"
+                src="{% if post.image %}{{ post.image.url }}
+                    {% else %}http://placehold.it/900x300{% endif %}" alt="user pic">
+                <!-- <img class="img-responsive" src="http://placehold.it/900x300" alt=""> -->
                 <hr>
                 <p>{{ post.post_content|truncatechars:"400" }}{% if post.post_content|length > 400 %}...{% endif %}</p>
                 <a class="btn btn-primary" href="{% url 'blog:detail' post.id %}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                 <hr>
                 {% endfor %}
 
+            {% if is_paginated %}
+            <div class="col-md-7 my_pag2">
 
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="previous">
-                        <a href="#">&larr; Older</a>
-                    </li>
-                    <li class="next">
-                        <a href="#">Newer &rarr;</a>
-                    </li>
-                </ul>
 
+            <ul  class="pagination pagination-centered">
+                {% if page_obj.has_previous %}
+                    <li><a href="?page=1">&larr; previous</a></li>
+                    <!-- <li><a href="?page={{ page_obj.previous_page_number }}">previous_page_number</a></li> -->
+                {% endif %}
+
+                {% for i in paginator.page_range %}
+                    <li {% if page_obj.number == i %} class="active" {% endif %}><a href="?page={{i}}">{{i}}</a></li>
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}">next &rarr;</a></li>
+                    <!-- <li><a href="?page={{ page_obj.paginator.num_pages }}">num_pages</a></li> -->
+                {% endif %}
+            </ul>
             </div>
+            {% endif %}
 
+
+             </div>
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
 

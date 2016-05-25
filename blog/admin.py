@@ -10,5 +10,7 @@ class PostAdmin(admin.ModelAdmin):
     # list_display = ('name', 'short_description')
     search_fields =('title',)
 
+
+
 admin.site.register(Post,  PostAdmin)
 admin.site.register(Tag)

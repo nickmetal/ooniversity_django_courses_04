@@ -22,7 +22,11 @@ from blog.models import Post
 class PostListView(ListView):
     model = Post
     template_name = "blog/index.html"
-    # paginate_by = 3
+    paginate_by = 3
+    date_field = 'date'
+    allow_empty = True
+    # queryset = MyModel.all()
+    # template_name = 'example/archive.html'
 
     def get_queryset(self):
         course_id = self.request.GET.get('course_id', None)
@@ -31,14 +35,16 @@ class PostListView(ListView):
         else:
             posts = Post.objects.all().order_by('-create_date')
 
-
-
         # q = self.request.GET.get("q")
         # if q:
         #     posts = posts.filter(
         #         Q(name__icontains=q) |
         #         Q(surname__icontains=q)
         #         )
+
+
+
+
 
         return posts
 

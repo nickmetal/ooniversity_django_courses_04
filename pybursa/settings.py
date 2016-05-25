@@ -35,8 +35,9 @@ INSTALLED_APPS = (
     'students',
     'coaches',
     'feedbacks',
-    'sendgrid',
     'blog',
+    'sendgrid',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -84,6 +85,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 LOGIN_URL = "/login/"
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+
 STATICFILES_DIRS = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 # TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'), )
